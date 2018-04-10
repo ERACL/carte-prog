@@ -1,1 +1,277 @@
 EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:carte-prog-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L RJ12 J2
+U 1 1 5AB67FFB
+P 5825 3175
+F 0 "J2" H 6025 3675 50  0000 C CNN
+F 1 "RJ12 - Côté ordinateur" V 6450 3300 50  0000 C CNN
+F 2 "RJ12:RJ12" H 5825 3175 50  0001 C CNN
+F 3 "" H 5825 3175 50  0001 C CNN
+	1    5825 3175
+	0    1    1    0   
+$EndComp
+NoConn ~ 6125 3675
+NoConn ~ 6225 3675
+$Comp
+L Conn_02x05_Odd_Even J1
+U 1 1 5ACCB023
+P 1500 3200
+F 0 "J1" H 1550 3500 50  0000 C CNN
+F 1 "Connecteur côté carte" H 1550 2900 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x05_Pitch2.54mm" H 1500 3200 50  0001 C CNN
+F 3 "" H 1500 3200 50  0001 C CNN
+	1    1500 3200
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1300 3000
+$Comp
+L +5V #PWR01
+U 1 1 5ACCB0F8
+P 925 3100
+F 0 "#PWR01" H 925 2950 50  0001 C CNN
+F 1 "+5V" V 925 3300 50  0000 C CNN
+F 2 "" H 925 3100 50  0001 C CNN
+F 3 "" H 925 3100 50  0001 C CNN
+	1    925  3100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L +3.3V #PWR02
+U 1 1 5ACCB120
+P 2175 3100
+F 0 "#PWR02" H 2175 2950 50  0001 C CNN
+F 1 "+3.3V" V 2175 3325 50  0000 C CNN
+F 2 "" H 2175 3100 50  0001 C CNN
+F 3 "" H 2175 3100 50  0001 C CNN
+	1    2175 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR03
+U 1 1 5ACCB138
+P 2175 3200
+F 0 "#PWR03" H 2175 2950 50  0001 C CNN
+F 1 "GND" V 2175 3000 50  0000 C CNN
+F 2 "" H 2175 3200 50  0001 C CNN
+F 3 "" H 2175 3200 50  0001 C CNN
+	1    2175 3200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1800 3100 2175 3100
+Wire Wire Line
+	1800 3200 2175 3200
+Wire Wire Line
+	925  3100 1300 3100
+Wire Wire Line
+	1800 3300 2175 3300
+Wire Wire Line
+	2175 3400 1800 3400
+Wire Wire Line
+	925  3400 1300 3400
+Wire Wire Line
+	925  3300 1300 3300
+Wire Wire Line
+	925  3200 1300 3200
+Wire Wire Line
+	2175 3000 1800 3000
+Text Label 2175 3000 2    60   ~ 0
+MCLR
+Text Label 2175 3300 2    60   ~ 0
+PDT
+Text Label 2175 3400 2    60   ~ 0
+PCK
+Text Label 925  3400 0    60   ~ 0
+PDB
+Text Label 925  3300 0    60   ~ 0
+DBG_RX
+Text Label 925  3200 0    60   ~ 0
+DBG_TX
+$Comp
+L +3.3V #PWR04
+U 1 1 5ACCB301
+P 3100 3050
+F 0 "#PWR04" H 3100 2900 50  0001 C CNN
+F 1 "+3.3V" V 3100 3275 50  0000 C CNN
+F 2 "" H 3100 3050 50  0001 C CNN
+F 3 "" H 3100 3050 50  0001 C CNN
+	1    3100 3050
+	0    -1   1    0   
+$EndComp
+$Comp
+L GND #PWR05
+U 1 1 5ACCB307
+P 5000 3175
+F 0 "#PWR05" H 5000 2925 50  0001 C CNN
+F 1 "GND" V 5000 2975 50  0000 C CNN
+F 2 "" H 5000 3175 50  0001 C CNN
+F 3 "" H 5000 3175 50  0001 C CNN
+	1    5000 3175
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	3100 3050 3475 3050
+Wire Wire Line
+	5000 3175 5375 3175
+Wire Wire Line
+	5375 3275 5000 3275
+Wire Wire Line
+	5000 3375 5375 3375
+Wire Wire Line
+	5000 2975 5375 2975
+Text Label 5000 2975 0    60   ~ 0
+MCLR
+Text Label 5000 3275 0    60   ~ 0
+PDT
+Text Label 5000 3375 0    60   ~ 0
+PCK
+Wire Wire Line
+	5000 3475 5375 3475
+Text Label 5000 3475 0    60   ~ 0
+PDB
+Wire Wire Line
+	3100 3325 3475 3325
+$Comp
+L +5V #PWR06
+U 1 1 5ACCC3AA
+P 3100 3325
+F 0 "#PWR06" H 3100 3175 50  0001 C CNN
+F 1 "+5V" V 3100 3525 50  0000 C CNN
+F 2 "" H 3100 3325 50  0001 C CNN
+F 3 "" H 3100 3325 50  0001 C CNN
+	1    3100 3325
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Conn_01x01 J3
+U 1 1 5ACCC3E3
+P 3675 3050
+F 0 "J3" H 3675 3150 50  0000 C CNN
+F 1 "3.3V" H 3675 2950 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x01_Pitch2.54mm" H 3675 3050 50  0001 C CNN
+F 3 "" H 3675 3050 50  0001 C CNN
+	1    3675 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x01 J4
+U 1 1 5ACCC434
+P 3675 3325
+F 0 "J4" H 3675 3425 50  0000 C CNN
+F 1 "5V" H 3675 3225 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x01_Pitch2.54mm" H 3675 3325 50  0001 C CNN
+F 3 "" H 3675 3325 50  0001 C CNN
+	1    3675 3325
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 3075 5375 3075
+Text Label 5000 3075 0    60   ~ 0
+ALIM
+Text Label 4525 3175 2    60   ~ 0
+ALIM
+Wire Wire Line
+	4525 3175 4175 3175
+$Comp
+L Conn_01x01 J5
+U 1 1 5ACCC65D
+P 3975 3175
+F 0 "J5" H 3975 3275 50  0000 C CNN
+F 1 "ALIM" H 3975 3075 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x01_Pitch2.54mm" H 3975 3175 50  0001 C CNN
+F 3 "" H 3975 3175 50  0001 C CNN
+	1    3975 3175
+	-1   0    0    1   
+$EndComp
+Text Notes 3125 3750 0    60   ~ 0
+Relier d'un fil les connecteurs\nselon besoin 3.3V ou 5V
+$Comp
+L PWR_FLAG #FLG07
+U 1 1 5ACCC8DD
+P 1825 2750
+F 0 "#FLG07" H 1825 2825 50  0001 C CNN
+F 1 "PWR_FLAG" V 1825 3100 50  0000 C CNN
+F 2 "" H 1825 2750 50  0001 C CNN
+F 3 "" H 1825 2750 50  0001 C CNN
+	1    1825 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG08
+U 1 1 5ACCC930
+P 1925 2750
+F 0 "#FLG08" H 1925 2825 50  0001 C CNN
+F 1 "PWR_FLAG" V 1925 3100 50  0000 C CNN
+F 2 "" H 1925 2750 50  0001 C CNN
+F 3 "" H 1925 2750 50  0001 C CNN
+	1    1925 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1825 2750 1825 3200
+Connection ~ 1825 3200
+Wire Wire Line
+	1925 2750 1925 3100
+Connection ~ 1925 3100
+$Comp
+L PWR_FLAG #FLG09
+U 1 1 5ACCC985
+P 1125 2750
+F 0 "#FLG09" H 1125 2825 50  0001 C CNN
+F 1 "PWR_FLAG" V 1125 3100 50  0000 C CNN
+F 2 "" H 1125 2750 50  0001 C CNN
+F 3 "" H 1125 2750 50  0001 C CNN
+	1    1125 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1125 2750 1125 3100
+Connection ~ 1125 3100
+$EndSCHEMATC
