@@ -15,7 +15,7 @@
   (page A4)
   (title_block
     (title "Carte programmation")
-    (rev vx.x)
+    (rev v1.x)
     (company "Ecole Centrale Lyon")
     (comment 1 "Année 2018")
     (comment 2 "Contacter G. CHARREAUX")
@@ -1500,7 +1500,7 @@
   (gr_text Prog (at 191.516 89.916) (layer F.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)))
   )
-  (gr_text "v X.X" (at 192.024 92.456) (layer F.SilkS)
+  (gr_text "v 1.X" (at 192.024 92.456) (layer F.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)))
   )
   (gr_text 3.3V (at 231.648 88.9) (layer F.SilkS)

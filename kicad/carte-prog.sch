@@ -39,7 +39,7 @@ encoding utf-8
 Sheet 1 1
 Title "Carte programmation"
 Date ""
-Rev "vx.x"
+Rev "v1.x"
 Comp "Ecole Centrale Lyon"
 Comment1 "Année 2018"
 Comment2 "Contacter G.CHARREAUX"
