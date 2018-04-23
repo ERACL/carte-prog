@@ -135,17 +135,6 @@ DBG_RX
 Text Label 950  4000 0    60   ~ 0
 DBG_TX
 $Comp
-L +3.3V #PWR04
-U 1 1 5ACCB301
-P 3675 750
-F 0 "#PWR04" H 3675 600 50  0001 C CNN
-F 1 "+3.3V" V 3675 975 50  0000 C CNN
-F 2 "" H 3675 750 50  0001 C CNN
-F 3 "" H 3675 750 50  0001 C CNN
-	1    3675 750 
-	0    1    1    0   
-$EndComp
-$Comp
 L GND #PWR05
 U 1 1 5ACCB307
 P 3100 2100
@@ -156,8 +145,6 @@ F 3 "" H 3100 2100 50  0001 C CNN
 	1    3100 2100
 	0    1    -1   0   
 $EndComp
-Wire Wire Line
-	3675 750  3300 750 
 Wire Wire Line
 	3100 2100 3475 2100
 Wire Wire Line
@@ -177,42 +164,7 @@ Wire Wire Line
 Text Label 3100 2400 0    60   ~ 0
 PDB
 Wire Wire Line
-	3675 950  3300 950 
-$Comp
-L +5V #PWR06
-U 1 1 5ACCC3AA
-P 3675 950
-F 0 "#PWR06" H 3675 800 50  0001 C CNN
-F 1 "+5V" V 3675 1150 50  0000 C CNN
-F 2 "" H 3675 950 50  0001 C CNN
-F 3 "" H 3675 950 50  0001 C CNN
-	1    3675 950 
-	0    1    -1   0   
-$EndComp
-Wire Wire Line
 	3100 2000 3475 2000
-Text Label 3100 2000 0    60   ~ 0
-ALIM
-Text Label 3650 850  2    60   ~ 0
-ALIM
-Wire Wire Line
-	3650 850  3300 850 
-Text Notes 2825 1400 0    60   ~ 0
-Relier d'un fil les connecteurs\nselon besoin 3.3V ou 5V
-$Comp
-L PWR_FLAG #FLG07
-U 1 1 5ACCC8DD
-P 1850 3550
-F 0 "#FLG07" H 1850 3625 50  0001 C CNN
-F 1 "PWR_FLAG" V 1850 3900 50  0000 C CNN
-F 2 "" H 1850 3550 50  0001 C CNN
-F 3 "" H 1850 3550 50  0001 C CNN
-	1    1850 3550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1850 3550 1850 4000
-Connection ~ 1850 4000
 $Comp
 L MAX232 U2
 U 1 1 5AD79869
@@ -234,17 +186,6 @@ F 2 "Connectors:DB9FC" H 7725 2425 50  0001 C CNN
 F 3 "" H 7725 2425 50  0001 C CNN
 	1    7725 2425
 	1    0    0    -1  
-$EndComp
-$Comp
-L Conn_01x03 J3
-U 1 1 5AD9DE07
-P 3100 850
-F 0 "J3" H 3100 1050 50  0000 C CNN
-F 1 "CHOIX ALIM" H 3100 650 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Angled_1x03_Pitch2.54mm" H 3100 850 50  0001 C CNN
-F 3 "" H 3100 850 50  0001 C CNN
-	1    3100 850 
-	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	4750 2425 5125 2425
@@ -497,11 +438,9 @@ Wire Wire Line
 Wire Wire Line
 	7375 1525 7250 1525
 Wire Wire Line
-	5925 725  7375 725 
+	5925 725  7475 725 
 Wire Wire Line
 	7375 725  7375 1525
-Text Label 6375 725  0    60   ~ 0
-ALIM
 NoConn ~ 6725 2625
 NoConn ~ 6725 2225
 $Comp
@@ -554,14 +493,6 @@ Wire Notes Line
 Text Notes 625  2900 0    60   ~ 0
 Régulation tension
 Wire Notes Line
-	2775 550  2775 1425
-Wire Notes Line
-	2775 1425 4275 1425
-Wire Notes Line
-	4275 1425 4275 550 
-Wire Notes Line
-	4275 550  2775 550 
-Wire Notes Line
 	4675 3625 8000 3625
 Wire Notes Line
 	8000 3625 8000 575 
@@ -585,12 +516,61 @@ Wire Notes Line
 	2575 4375 2575 2950
 Wire Notes Line
 	2575 2950 625  2950
-Text Notes 2775 1550 0    60   ~ 0
-Alimentation depuis ordi
 Text Notes 2775 2900 0    60   ~ 0
 Connecteur programmation
 Text Notes 625  4475 0    60   ~ 0
 Connecteur côté carte
 Text Notes 4675 3750 0    60   ~ 0
 Debugger
+$Comp
+L +5V #PWR?
+U 1 1 5ADDF6C7
+P 3100 2000
+F 0 "#PWR?" H 3100 1850 50  0001 C CNN
+F 1 "+5V" V 3100 2200 50  0000 C CNN
+F 2 "" H 3100 2000 50  0001 C CNN
+F 3 "" H 3100 2000 50  0001 C CNN
+	1    3100 2000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L +5V #PWR?
+U 1 1 5ADDF747
+P 7475 725
+F 0 "#PWR?" H 7475 575 50  0001 C CNN
+F 1 "+5V" V 7475 925 50  0000 C CNN
+F 2 "" H 7475 725 50  0001 C CNN
+F 3 "" H 7475 725 50  0001 C CNN
+	1    7475 725 
+	0    1    1    0   
+$EndComp
+Connection ~ 7375 725 
+$Comp
+L PWR_FLAG #FLG?
+U 1 1 5ADDFA29
+P 3450 1600
+F 0 "#FLG?" H 3450 1675 50  0001 C CNN
+F 1 "PWR_FLAG" V 3450 1950 50  0000 C CNN
+F 2 "" H 3450 1600 50  0001 C CNN
+F 3 "" H 3450 1600 50  0001 C CNN
+	1    3450 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG?
+U 1 1 5ADDFA5B
+P 3350 1600
+F 0 "#FLG?" H 3350 1675 50  0001 C CNN
+F 1 "PWR_FLAG" V 3350 1950 50  0000 C CNN
+F 2 "" H 3350 1600 50  0001 C CNN
+F 3 "" H 3350 1600 50  0001 C CNN
+	1    3350 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 1600 3450 2000
+Connection ~ 3450 2000
+Wire Wire Line
+	3350 1600 3350 2100
+Connection ~ 3350 2100
 $EndSCHEMATC
