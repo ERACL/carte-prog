@@ -38,8 +38,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Carte programmation"
-Date ""
-Rev "v1.x"
+Date "2018-04-23"
+Rev "v1.1"
 Comp "Ecole Centrale Lyon"
 Comment1 "Année 2018"
 Comment2 "Contacter G.CHARREAUX"

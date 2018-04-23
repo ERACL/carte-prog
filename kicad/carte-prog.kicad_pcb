@@ -15,7 +15,8 @@
   (page A4)
   (title_block
     (title "Carte programmation")
-    (rev v1.x)
+    (date 2018-04-23)
+    (rev v1.1)
     (company "Ecole Centrale Lyon")
     (comment 1 "Année 2018")
     (comment 2 "Contacter G. CHARREAUX")
